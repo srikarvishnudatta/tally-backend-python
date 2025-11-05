@@ -5,5 +5,5 @@ sqlalchemy
 passlib
 starlette
 python-dotenv
-pyjwt
+PyJWT
 psycopg2-binary

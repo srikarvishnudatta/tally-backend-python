@@ -2,6 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, DeclarativeBase
 from dotenv import load_dotenv
 import os
+from .models import User, Groups, Expense, user_group_association
 
 _ = load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
@@ -9,7 +10,7 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 assert DATABASE_URL
 
 engine = create_engine(DATABASE_URL)
-SessionLocal = sessionmaker(bind=engine, auto_flush=False, autocommit=False)
+SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 
 
 class Base(DeclarativeBase):

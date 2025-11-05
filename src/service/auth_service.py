@@ -3,7 +3,7 @@ from src.database.models.users import User
 from passlib.context import CryptContext
 from fastapi import HTTPException
 from starlette.status import HTTP_400_BAD_REQUEST
-from src.dto.UserDto import CreateUser, LoginUser
+from src.dto.user_dto import CreateUser, LoginUser
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
